@@ -21,7 +21,7 @@ function getData(){
  * Function which shows the weather data by city name
  */
 function showDataWithCityName(){
-$.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&units=metric&appid=" + getAPIKey(), showdata = function(data){
+$.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&units=metric&appid=" + getAPIKey(), showdata = function(data){
 
     // Getting the icon from the JSON object as String
     var icon = "http:/openweathermap.org/img/w/" + data.weather[0].icon + ".png";
@@ -42,7 +42,7 @@ $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&un
  * Function which shows the weather data by ZIP code
  */
 function showDataWithZIP(){
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip=" + getZipCode() + "," + getCountry() + "&units=metric&appid=" + getAPIKey(), showdata = function(data){
+    $.getJSON("https://api.openweathermap.org/data/2.5/weather?zip=" + getZipCode() + "," + getCountry() + "&units=metric&appid=" + getAPIKey(), showdata = function(data){
     
         // Getting the icon from the JSON object as String
         var icon = "http:/openweathermap.org/img/w/" + data.weather[0].icon + ".png";
