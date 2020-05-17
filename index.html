@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Weather API</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple Weather API</h1>
+    <div class="input-container">
+        <form action="javascript:showData(getCity())">
+            <label for="cityName">Search by city name: </label>
+            <input type="text" id="cityName" name="cityN" placeholder="City name" required> <br> <br>
+            <label for="zipCode">Search by ZIP code: </label>
+            <input type="text" id="zipCode" name="zipC" value="65520" placeholder="ZIP code"> <br>
+            <br>
+            <input class="bWeather" type="button" value="Get weather data" onclick="getData()">
+        </form>
+        <br>
+        <select id="country">
+            <option value="de">Germany</option>
+            <option value="us">USA</option>
+        </select>
+    </div>
+    <div class="weather-container">
+        <img class="weather-icon">
+        <p class="weather-status"></p>
+        <p class="temperature"></p>
+        <p class="city-name"></p>
+    </div>
+    <div>
+        <h2>How does it work?</h2>
+        <p>
+            You can either search for weather data by city name or zip code. <br>
+            It shows only the weather status e.g. "Clear" and the temperature in celsius. <br>
+            *Right now it is only possible to search by zip code for only two countries (Germany, Usa).* <br>
+            <a href="https://github.com/Whitestripe7773">Have a look at the code on Github</a>
+        </p>
+    </div>
+    <footer>
+        Made with the API by <a href="openweathermap.org">Openweathermap.org</a> - Whitestripe7773
+    </footer>
+</body>
+</html>
