@@ -45,7 +45,7 @@ function showDataWithZIP(){
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?zip=" + getZipCode() + "," + getCountry() + "&units=metric&appid=" + getAPIKey(), showdata = function(data){
     
         // Getting the icon from the JSON object as String
-        var icon = "http:/openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+        var icon = "https:/openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         // Getting the Temperatue from the JSON object
         var temperature = Math.floor(data.main.temp);
         // Getting the weather status from the JSON object
