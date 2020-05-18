@@ -29,12 +29,15 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&u
     var temperature = Math.floor(data.main.temp);
     // Getting the weather status from the JSON object
     var weatherStatus = data.weather[0].main;
+    // Getting the wind speed from the JSON object
+    var windspeed = data.wind.speed;
 
     // In die class "weather-icon" in der index HTML packen wir das att(src, icon) rein
     $(".weather-icon").attr("src", icon);
     $(".weather-status").text(weatherStatus);
-    $(".temperature").text(temperature +"°C");
+    $(".temperature").text(temperature +" °C");
     $(".city-name").text(getCity());
+    $(".wind-speed").text(windspeed);
 });
 }
 
@@ -43,19 +46,24 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&u
  */
 function showDataWithZIP(){
     $.getJSON("https://api.openweathermap.org/data/2.5/weather?zip=" + getZipCode() + "," + getCountry() + "&units=metric&appid=" + getAPIKey(), showdata = function(data){
-    
+    console.log(data)
         // Getting the icon from the JSON object as String
         var icon = "https:/openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         // Getting the Temperatue from the JSON object
         var temperature = Math.floor(data.main.temp);
         // Getting the weather status from the JSON object
         var weatherStatus = data.weather[0].main;
+        // Getting the wind speed from the JSON object
+        var windspeed = data.wind.speed;
+        // Getting the city name from the JSON object
+        var city = data.name;
     
         // In die class "weather-icon" in der index HTML packen wir das att(src, icon) rein
         $(".weather-icon").attr("src", icon);
         $(".weather-status").text(weatherStatus);
-        $(".temperature").text(temperature + "°C");
-        $(".city-name").text(getCity());
+        $(".temperature").text(temperature + " °C");
+        $(".city-name").text(city);
+        $(".wind-speed").text(windspeed + " m/s");
     });
     }
 

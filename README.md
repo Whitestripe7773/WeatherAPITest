@@ -1,4 +1,4 @@
-Simple Weather API
+Simple Weather Data
 
 In this project I am testing out the weather API
 by openweathermap.org.

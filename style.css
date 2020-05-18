@@ -17,7 +17,15 @@ h1, label{
     color: #34495e;
     text-align: center;
     background-color: #ccc;
-    padding: 10px;
+    padding:40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#country{
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .bWeather{
@@ -25,4 +33,15 @@ h1, label{
     padding: 0.5em 2em;
     border-radius: 5px;
     background-color: white;    
+}
+
+.footer-box{
+    color: white;
+}
+
+.github{
+    font-size: 24px;
+    text-decoration: none;
+    background-color: none;
+    color: white;
 }

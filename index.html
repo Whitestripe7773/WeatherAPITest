@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Simple Weather API</title>
+    <title>Simple Weather Data</title>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simple Weather API</h1>
-    <div class="input-container">
+    <h1 class="font-weight-bold">Simple Weather Data</h1>
+    <div class="container-fluid">
         <form action="javascript:showData(getCity())">
             <label for="cityName">Search by city name: </label>
             <input type="text" id="cityName" name="cityN" placeholder="City name" required> <br> <br>
             <label for="zipCode">Search by ZIP code: </label>
             <input type="text" id="zipCode" name="zipC" placeholder="ZIP code"> <br>
             <br>
-            <input class="bWeather" type="button" value="Get weather data" onclick="getData()">
+            <input class="btn btn-dark" type="button" value="Get weather data" onclick="getData()">
         </form>
         <br>
-        <select id="country">
+        <select class="btn-dark" id="country">
             <option value="de">Germany</option>
             <option value="us">USA</option>
         </select>
     </div>
     <div class="weather-container">
         <img class="weather-icon">
-        <p class="weather-status"></p>
-        <p class="temperature"></p>
-        <p class="city-name"></p>
+        <p class="weather-status">Weather status</p>
+        <p class="temperature">Temperature</p>
+        <p class="wind-speed">Wind speed</p>
+        <p class="city-name">City name</p>
     </div>
     <div>
         <h2>How does it work?</h2>
@@ -42,8 +45,16 @@
             <a href="https://github.com/Whitestripe7773">Have a look at the code on Github</a>
         </p>
     </div>
-    <footer>
-        Made with the API by <a href="openweathermap.org">Openweathermap.org</a> - Whitestripe7773
+    <footer class="py-5 bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center footer-box">
+                    <p>Powered by the API from <a href="openweathermap.org">Openweathermap.org</a></p> <br>
+                    <p>©2020 - Whitestripe7773 </p>
+                    <a class="github" href="https://github.com/Whitestripe7773"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
