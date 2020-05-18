@@ -37,7 +37,7 @@ $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&u
     $(".weather-status").text(weatherStatus);
     $(".temperature").text(temperature +" °C");
     $(".city-name").text(getCity());
-    $(".wind-speed").text(windspeed);
+    $(".wind-speed").text(windspeed + " m/s");
 });
 }
 
